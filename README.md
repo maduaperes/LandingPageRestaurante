@@ -83,12 +83,6 @@ O layout se adapta automaticamente a:
 
 ---
 
-## 📸 Preview
-
-> Adicione aqui prints da landing page para valorizar ainda mais o projeto.
-
----
-
 ## 🧑‍💻 Autor
 
 Desenvolvido por **Madu Peres**
