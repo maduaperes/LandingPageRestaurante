@@ -36,11 +36,18 @@
 }
 
 .dish img {
-    width: 100%;
-    max-width: 220px;
+    width: 220px;
+    /* Largura fixa */
     height: 220px;
-    object-fit: contain;
+    /* Altura igual à largura */
+    object-fit: cover;
+    /* Recorta a imagem para preencher o círculo */
     margin-top: 10px;
+    border-radius: 50%;
+    /* Aplica o círculo */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .dish-heart {
@@ -73,6 +80,41 @@
     gap: 20px;
 }
 
+.dish-price button {
+    cursor: default;
+}
+
+.menu-warning {
+    text-align: center;
+    font-size: 14px;
+    color: #888;
+    margin: 8px 0 24px;
+    font-style: italic;
+    margin-top: 16px;
+    margin-bottom: 2px;
+}
+
+.illustrative-action {
+    display: block;
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.cta-cardapio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.cta-note {
+    font-size: 12px;
+    color: #777;
+}
+
+
 @media (max-width: 1150px) {
     #dishes {
         display: flex;
@@ -96,6 +138,7 @@
         height: auto;
         margin: 0 auto;
         display: block;
+        border-radius: 50%;
     }
 
     .dish .dish-title {

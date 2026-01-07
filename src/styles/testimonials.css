@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     gap: 48px;
+    position: relative;
 }
 
 #testimonial_chef {
@@ -56,6 +57,25 @@
 .feedback-content p span {
     color: var(--color-primary-6);
 }
+
+.chef-illustrative {
+    display: contents;
+    /* 🔥 chave da solução */
+}
+
+.chef-label {
+    position: absolute;
+    bottom: 15.5%;
+    left: 10%;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    font-size: 11px;
+    padding: 4px 6px;
+    border-radius: 4px;
+    z-index: 5;
+    pointer-events: none;
+}
+
 
 @media (max-width: 1280px) {
     #testimonials {
