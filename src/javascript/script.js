@@ -16,22 +16,29 @@ $(document).ready(function() {
         if (scrollPosition <= 0) {
             header.css('box-shadow', 'none');
         } else {
-            header.css('box-shadow', '5px 1px 5px rgba(0, 0, 0, 0.1');
+            header.css('box-shadow', '5px 1px 5px rgba(0, 0, 0, 0.1)');
         }
 
         sections.each(function(i) {
             const section = $(this);
             const sectionTop = section.offset().top - 96;
-            const sectionBottom = sectionTop+ section.outerHeight();
+            const sectionBottom = sectionTop + section.outerHeight();
 
             if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
                 activeSectionIndex = i;
                 return false;
             }
-        })
+        });
 
         navItems.removeClass('active');
         $(navItems[activeSectionIndex]).addClass('active');
+    });
+
+    $('.btn-whatsapp').on('click', function() {
+        const tel = "5515996514120";
+        const msg = encodeURIComponent("Olá! Gostaria de fazer um pedido.");
+        const url = `https://wa.me/${tel}?text=${msg}`;
+        window.open(url, '_blank');
     });
 
     ScrollReveal().reveal('#cta', {
@@ -50,11 +57,11 @@ $(document).ready(function() {
         origin: 'left',
         duration: 1000,
         distance: '20%'
-    })
+    });
 
     ScrollReveal().reveal('.feedback', {
         origin: 'right',
         duration: 1000,
         distance: '20%'
-    })
+    });
 });

@@ -1,4 +1,3 @@
-/* ===== Footer ===== */
 footer {
     background-color: var(--color-primary-2);
 }
@@ -8,7 +7,7 @@ footer {
     justify-content: space-between;
     padding: 0px 8% 24px 8%;
     align-items: center;
-    flex-wrap: wrap; /* permite quebrar em telas pequenas */
+    flex-wrap: wrap;
 }
 
 #copyright {
@@ -16,21 +15,17 @@ footer {
     font-weight: 500;
 }
 
-/* ===== Responsividade ===== */
-
-/* Tablets e notebooks médios */
 @media (max-width: 992px) {
     #footer_items {
         padding: 0px 5% 24px 5%;
     }
 }
 
-/* Tablets pequenos e celulares grandes */
 @media (max-width: 768px) {
     #footer_items {
-        flex-direction: column; /* itens empilham verticalmente */
+        flex-direction: column;
         align-items: center;
-        gap: 16px; /* espaçamento entre itens */
+        gap: 16px;
         padding: 0px 4% 24px 4%;
     }
 
@@ -39,7 +34,6 @@ footer {
     }
 }
 
-/* Celulares */
 @media (max-width: 480px) {
     #footer_items {
         padding: 0px 2% 24px 2%;

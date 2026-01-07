@@ -12,9 +12,12 @@
     justify-content: center;
     gap: 24px;
     margin-top: 32px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* CARD */
 .dish {
     display: flex;
     flex-direction: column;
@@ -22,7 +25,8 @@
     justify-content: space-between;
     border-radius: 20px;
     gap: 18px;
-    width: 30%;
+    width: calc(33.333% - 24px);
+    min-width: 280px;
     padding: 20px;
     background-color: var(--color-neutral-0);
     box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
@@ -31,16 +35,14 @@
     text-align: center;
 }
 
-/* IMAGEM DO PRATO (AJUSTE PRINCIPAL) */
 .dish img {
     width: 100%;
     max-width: 220px;
     height: 220px;
-    object-fit: contain; /* ideal para PNG/WebP sem fundo */
+    object-fit: contain;
     margin-top: 10px;
 }
 
-/* CORAÇÃO */
 .dish-heart {
     position: absolute;
     background-color: var(--color-primary-6);
@@ -71,61 +73,79 @@
     gap: 20px;
 }
 
-/* ================= RESPONSIVIDADE ================= */
-
-/* Tablets e notebooks médios */
-@media (max-width: 992px) {
+@media (max-width: 1150px) {
     #dishes {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 20px;
     }
 
     .dish {
-        width: 45%; /* dois cards por linha em telas médias */
-        padding: 18px;
+        width: 30%;
+        max-width: 320px;
+        min-width: 250px;
+        padding: 20px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
     }
 
     .dish img {
+        width: 100%;
         max-width: 180px;
-        height: 180px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .dish .dish-title {
+        font-size: 1.1rem;
     }
 }
 
-/* Tablets pequenos / iPad Air */
-@media (max-width: 820px) {
-    .dish {
-        width: 48%; /* dois cards por linha, ajustado para iPad */
-        padding: 16px;
-    }
-
-    .dish img {
-        max-width: 160px;
-        height: 160px;
-    }
-}
-
-/* Tablets pequenos e celulares grandes */
-@media (max-width: 768px) {
+@media (max-width: 940px) {
     #dishes {
-        flex-direction: column; /* empilha os cards */
-        align-items: center;
-        gap: 24px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
     }
 
     .dish {
-        width: 80%; /* ocupa a maior parte da tela */
-        padding: 16px;
+        width: calc(50% - 16px);
+        min-width: 150px;
+        padding: 12px;
+        gap: 10px;
     }
 
     .dish img {
-        max-width: 180px;
-        height: 180px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .dish-title {
+        font-size: 1rem;
     }
 }
 
-/* Celulares */
-@media (max-width: 480px) {
+@media (max-width: 700px) {
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #menu .section-title,
+    #menu .section-subtitle {
+        width: 100%;
+        text-align: center;
+    }
+
     .dish {
-        width: 95%; /* quase 100% da tela */
+        width: 95%;
         padding: 14px;
     }
 
