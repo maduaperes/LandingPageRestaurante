@@ -1,3 +1,4 @@
+/* ===== Header ===== */
 header {
     width: 100%;
     padding: 28px 8%;
@@ -36,43 +37,74 @@ header {
     border-bottom: 3px solid var(--color-primary-4);
 }
 
+/* ===== Botão e menu móvel ===== */
 #mobile_btn {
     display: none;
+    font-size: 24px;
+    color: var(--color-neutral-1);
+    cursor: pointer;
 }
 
 #mobile_menu {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-primary-1);
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
 }
 
-@media screen and (max-width: 1170px) {
-    #nav_list,
-    #navbar .btn-default {
-        display: none;
+/* ================= RESPONSIVIDADE ================= */
+
+/* Tablets e telas médias */
+@media (max-width: 992px) {
+    #nav_list {
+        gap: 32px;
+    }
+}
+
+/* Tablets pequenos e celulares grandes */
+@media (max-width: 768px) {
+    #nav_list {
+        display: none; /* oculta lista de nav */
     }
 
     #mobile_btn {
-        display: block;
-        border: none;
-        background-color: transparent;
-        font-size: 1.5rem;
-        cursor: pointer;
+        display: block; /* mostra botão hamburger */
     }
 
+    /* Menu móvel inicialmente escondido */
+    #mobile_menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Quando o menu estiver ativo (ex: com classe .active) */
     #mobile_menu.active {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+    }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+    header {
+        padding: 16px 4%;
     }
 
-    #mobile_nav_list {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin: 12px 0px;
+    #nav_logo {
+        font-size: 20px;
     }
 
-    #mobile_nav_list .nav-item {
-        list-style: none;
-        text-align: center;
-    } 
+    #mobile_btn {
+        font-size: 20px;
+    }
+
+    #mobile_menu a {
+        font-size: 16px;
+    }
 }
