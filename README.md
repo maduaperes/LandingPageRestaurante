@@ -1,9 +1,3 @@
-Perfeito! Aqui está um **README.md profissional**, claro e bonito, ideal para **portfólio, cliente ou recrutador**.
-Você pode **copiar e colar direto no seu repositório**.
-
----
-
-```md
 # 🍽️ FreshBox — Landing Page de Restaurante
 
 Landing page moderna e responsiva para restaurante, desenvolvida com foco em **experiência do usuário**, **design atrativo** e **facilidade de uso**.  
