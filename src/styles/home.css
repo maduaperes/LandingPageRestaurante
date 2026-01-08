@@ -2,14 +2,15 @@
     display: flex;
     min-height: calc(100vh - 91px);
     position: relative;
+    overflow-x: hidden;
 }
 
 #cta {
-    width: 35%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     gap: 28px;
-    margin-top: 5%;
+    margin-top: 7%;
     z-index: 2;
 }
 
@@ -36,6 +37,11 @@
     color: var(--color-neutral-1);
 }
 
+.cta-note {
+    color: #868686;
+    font-size: 0.8rem;
+}
+
 #phone_button {
     display: flex;
     gap: 8px;
@@ -52,18 +58,16 @@
 }
 
 #banner_container {
-    position: relative;
     width: 50%;
-    left: 12%;
-    z-index: 1;
+    position: relative;
     display: flex;
-    align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 #banner {
     position: relative;
-    width: 50%;
+    width: 100%;
     height: auto;
     display: flex;
     align-items: center;
@@ -71,14 +75,16 @@
 }
 
 #banner img {
-    width: auto;
-    max-width: 130%;
+    width: 100%;
+    max-width: 1100px;
+    min-width: 420px;
     height: auto;
-    position: absolute;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    z-index: 2;
+    transform: translateX(40px);
 }
 
 .shape {
@@ -87,7 +93,7 @@
     height: 70%;
     position: absolute;
     border-radius: 50%;
-    top: 3%;
+    top: 10%;
     right: 10%;
     z-index: 1;
     display: flex;
@@ -119,6 +125,9 @@
         justify-content: space-between;
         overflow: hidden;
         padding-right: 0;
+        min-height: auto;
+        padding-bottom: 50px;
+        padding-top: 60px;
     }
 
     #cta {
@@ -129,12 +138,12 @@
     }
 
     #cta .title {
-        font-size: 2.8rem;
+        font-size: 3.2rem;
     }
 
     #cta_buttons {
         flex-direction: row;
-        width: 150%;
+        width: 100%;
         margin: 0;
         justify-content: flex-start;
     }
@@ -153,11 +162,11 @@
     #banner_container {
         width: 45%;
         position: relative;
-        left: 0;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         order: 2;
-        right: -5%;
+        right: 0;
+        transform: none;
     }
 
     #banner {
@@ -171,21 +180,20 @@
         left: auto;
         transform: none;
         width: 100%;
-        max-width: 200%;
+        max-width: 100%;
         height: auto;
         z-index: 1;
     }
 
     .shape {
-        display: flex;
-        width: 60%;
-        height: 78%;
         position: absolute;
+        width: 50%;
+        height: 70%;
         top: 10%;
-        right: -15%;
-        z-index: 1;
+        right: 5%;
         border-radius: 50%;
         background-color: var(--color-primary-2);
+        z-index: 1;
     }
 }
 
@@ -200,7 +208,7 @@
     }
 
     #cta {
-        width: 51%;
+        width: 50%;
         text-align: left;
         margin-top: 0;
         z-index: 2;
@@ -212,9 +220,12 @@
 
     #cta_buttons {
         flex-direction: row;
-        width: 150%;
+        width: 100%;
         margin: 0;
         justify-content: flex-start;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        gap: 16px;
     }
 
     #social_buttons {
@@ -235,7 +246,7 @@
         display: flex;
         justify-content: flex-end;
         order: 2;
-        right: -5%;
+        right: 0;
     }
 
     #banner {
@@ -249,21 +260,20 @@
         left: auto;
         transform: none;
         width: 100%;
-        max-width: 650px;
+        max-width: 100%;
         height: auto;
         z-index: 1;
     }
 
     .shape {
-        display: flex;
-        width: 60%;
-        height: 70%;
         position: absolute;
-        top: 12%;
-        right: -15%;
-        z-index: 1;
+        width: 50%;
+        height: 60%;
+        top: 15%;
+        right: 5%;
         border-radius: 50%;
         background-color: var(--color-primary-2);
+        z-index: 1;
     }
 }
 
@@ -293,8 +303,9 @@
 
     #cta_buttons a,
     #phone_button {
-        width: 100%;
+        width: 70%;
         justify-content: center;
+        margin: 0 auto;
     }
 
     #social_buttons {
@@ -334,14 +345,14 @@
     }
 
     .shape {
-        display: flex;
-        width: 50%;
-        height: 27%;
         position: absolute;
-        top: 1%;
-        right: 27%;
-        z-index: 1;
+        width: 50%;
+        height: 30%;
+        top: 3%;
+        right: 25%;
         border-radius: 50%;
+        background-color: var(--color-primary-2);
+        z-index: 1;
     }
 }
 
@@ -371,8 +382,15 @@
 
     #cta_buttons a,
     #phone_button {
-        width: 100%;
+        width: 70%;
         justify-content: center;
+        margin: 0 auto;
+    }
+
+    .cta-note {
+        color: #868686;
+        font-size: 1rem;
+        /* Substitua pela cor que desejar (ex: vermelho) */
     }
 
     #social_buttons {
@@ -412,14 +430,85 @@
     }
 
     .shape {
-        display: flex;
-        width: 75%;
-        height: 27%;
         position: absolute;
-        top: 1%;
-        right: 12%;
-        z-index: 1;
+        width: 70%;
+        height: 30%;
+        top: 3%;
+        right: 15%;
         border-radius: 50%;
+        background-color: var(--color-primary-2);
+        z-index: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 4%;
+        gap: 8px;
+    }
+
+    #cta {
+        width: 100%;
+        order: 1;
+        text-align: center;
+    }
+
+    #cta .title {
+        font-size: 2.5rem;
+    }
+
+    #cta_buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #cta_buttons a,
+    #phone_button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta-note {
+        color: #868686;
+        font-size: 0.8rem;
+        /* Substitua pela cor que desejar (ex: vermelho) */
+    }
+
+    #banner_container {
+        width: 100%;
+        left: 0;
+        order: 2;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    #banner {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    #banner img {
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .shape {
+        position: absolute;
+        width: 70%;
+        height: 30%;
+        top: 2%;
+        right: 15%;
+        border-radius: 50%;
+        background-color: var(--color-primary-2);
+        z-index: 1;
     }
 }
 
@@ -446,69 +535,10 @@
         width: 100%;
     }
 
-    #cta_buttons a,
-    #phone_button {
-        width: 100%;
-        justify-content: center;
-    }
-
-    #banner_container {
-        width: 100%;
-        left: 0;
-        order: 2;
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }
-
-    #banner {
-        width: 100%;
-        height: auto;
-        display: flex;
-        justify-content: center;
-    }
-
-    #banner img {
-        position: static;
-        transform: none;
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
-
-    .shape {
-        display: flex;
-        width: 75%;
-        height: 27%;
-        position: absolute;
-        top: 1%;
-        right: 12%;
-        z-index: 1;
-        border-radius: 50%;
-    }
-}
-
-@media (max-width: 479px) {
-    #home {
-        flex-direction: column;
-        text-align: center;
-        padding: 40px 4%;
-        gap: 8px;
-    }
-
-    #cta {
-        width: 100%;
-        order: 1;
-        text-align: center;
-    }
-
-    #cta .title {
-        font-size: 2.5rem;
-    }
-
-    #cta_buttons {
-        flex-direction: column;
-        width: 100%;
+    .cta-note {
+        color: #868686;
+        font-size: 0.8rem;
+        /* Substitua pela cor que desejar (ex: vermelho) */
     }
 
     #cta_buttons a,
@@ -542,13 +572,14 @@
     }
 
     .shape {
-        display: flex;
-        width: 75%;
-        height: 20%;
         position: absolute;
-        top: 1%;
-        right: 10.5%;
-        z-index: 1;
+        width: 70%;
+        height: 25%;
+        top: 2%;
+        right: 17%;
         border-radius: 50%;
+        background-color: var(--color-primary-2);
+        z-index: 1;
     }
+
 }

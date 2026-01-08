@@ -60,7 +60,6 @@
 
 .chef-illustrative {
     display: contents;
-    /* 🔥 chave da solução */
 }
 
 .chef-label {
@@ -76,36 +75,127 @@
     pointer-events: none;
 }
 
-
-@media (max-width: 1280px) {
+/* Layout Lado a Lado para Tablets e Desktop Pequeno */
+@media (min-width: 1025px) and (max-width: 1280px) {
     #testimonials {
-        display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-        padding: 40px 2%;
+        padding: 40px 4%;
+        gap: 30px;
         min-height: auto;
     }
 
-    #testimonial_chef {
-        width: 45%;
-        max-width: 400px;
-        border-radius: 12px;
+    #testimonials_content {
+        width: 55%;
     }
 
+    .chef-illustrative {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 45%;
+        /* Aumentado para comportar imagem maior */
+        position: relative;
+    }
+
+    #testimonial_chef {
+        width: 100%;
+        max-width: 450px;
+        /* Aumentado de 380px para 450px */
+    }
+
+    .chef-label {
+        position: absolute;
+        bottom: 5%;
+        left: 5%;
+        display: inline-block;
+        width: auto;
+        background: rgba(0, 0, 0, 0.65);
+        color: #fff;
+        font-style: normal;
+        text-align: left;
+        padding: 6px 12px;
+    }
+
+    #testimonials .section-subtitle {
+        font-size: 2.2rem;
+    }
+
+    .feedback-avatar {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 1024px) {
+    #testimonials {
+        /* Remove o espaço do topo para colar no menu */
+        padding-top: 20px !important; 
+        margin-top: 0 !important;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        /* Remove o espaço de baixo para colar no footer */
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+        min-height: auto !important;
+    }
+
+    /* Garante que o footer não tenha margens empurrando a seção */
+    footer {
+        margin-top: 0 !important;
+        padding-top: 10px !important;
+    }
+
+    /* --- BLOCO DO CHEFE (Aumentado) --- */
+    .chef-illustrative {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: auto !important;
+    }
+
+    #testimonial_chef {
+        /* Aumentado para ocupar quase toda a largura e crescer mais */
+        width: 90% !important;
+        max-width: 500px !important; 
+        margin-bottom: 0;
+        height: auto;
+    }
+
+    .chef-label {
+        position: static;
+        font-size: 12px;
+        color: #cacaca;
+        font-style: italic;
+        text-align: center;
+        width: 50%; /* Centraliza a legenda sob a imagem larga */
+        margin-bottom: 15px;
+        margin-top: 8px;
+    }
+
+    /* --- BLOCO DE TEXTOS --- */
     #testimonials_content {
-        width: 50%;
+        width: 100%;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
     }
 
     #testimonials .section-subtitle {
         font-size: 1.8rem;
-        line-height: 1.2;
+        margin-bottom: 15px;
     }
 
+    /* --- CARDS DE FEEDBACK --- */
     #feedbacks {
-        gap: 15px;
-        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 45px;
+        margin-bottom: 100px !important; 
     }
 
     .feedback {
@@ -119,24 +209,30 @@
     }
 
     .feedback-content p {
-        font-size: 0.9rem;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .feedback-content p:last-child {
-        font-size: 0.85rem;
+        margin: 0;
+        font-size: 1rem;
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     #testimonials {
+        padding-top: 0px !important;
+        margin-top: -40px;
+        /* Puxa a seção do Chef para cima */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* --- BLOCO DO CHEFE E MENSAGEM --- */
+    .chef-illustrative {
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 32px;
-        padding: 40px 4%;
-        min-height: auto;
+        width: 100%;
+        margin-bottom: 1%;
+        margin-top: 70px;
     }
 
     #testimonial_chef {
@@ -145,9 +241,28 @@
         margin-bottom: 0;
     }
 
+    .chef-label {
+        position: static;
+        font-size: 11px;
+        color: #cacaca;
+        /* Cor ajustada para melhor leitura no branco */
+        font-style: italic;
+        text-align: center;
+        display: block;
+        width: 50%;
+        z-index: 1;
+        /* Aumentado de 50% para garantir centralização total */
+    }
+
+    /* --- BLOCO DE TEXTOS E DEPOIMENTOS --- */
     #testimonials_content {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
+        margin-top: 0;
+        /* Garante que não haja espaço extra aqui */
     }
 
     #testimonials .section-subtitle {
@@ -155,6 +270,7 @@
         line-height: 1.2;
     }
 
+    /* --- CARDS DE FEEDBACK --- */
     #feedbacks {
         display: flex;
         flex-direction: column;
@@ -186,7 +302,6 @@
     }
 }
 
-
 @media (max-width: 480px) {
     #testimonial_chef {
         width: 90%;
@@ -197,6 +312,10 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .chef-label {
+        z-index: 1;
     }
 
     #testimonials .section-subtitle {

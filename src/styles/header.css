@@ -62,7 +62,7 @@ header {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 814px) {
     #nav_list {
         display: none;
     }
@@ -98,20 +98,42 @@ header {
     }
 }
 
-@media (max-width: 480px) {
-    header {
-        padding: 16px 4%;
+@media (max-width: 550px) {
+
+    /* Esconde o botão da navbar para sobrar espaço para o logo e o ícone sanduíche */
+    header nav .btn-default {
+        display: none;
     }
 
-    #nav_logo {
-        font-size: 20px;
-    }
-
-    #mobile_btn {
-        font-size: 20px;
-    }
-
-    #mobile_menu a {
+    /* Estiliza o botão que fica dentro do menu mobile */
+    #mobile_menu .btn-whatsapp {
+        width: 100%;
+        /* Largura total para facilitar o clique */
+        max-width: 250px;
+        /* Não deixa ele esticar demais em telas maiores */
+        padding: 12px 24px;
         font-size: 16px;
+        margin-top: 20px;
+        /* Separa dos itens da lista */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 12px;
+        background-color: var(--color-primary-6);
+        /* Sua cor principal */
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    /* Ajuste do container do menu mobile para centralizar o botão */
+    #mobile_menu {
+        display: none;
+        /* O JS controla isso, mas garantimos o flex quando ativo */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
     }
 }
