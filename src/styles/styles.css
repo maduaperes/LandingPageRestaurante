@@ -15,6 +15,11 @@
 
     --color-neutral-0: #fff;
     --color-neutral-1: #1d1d1d;
+    --color-neutral-2: #333;
+    --color-neutral-3: #4d4d4d;
+    --color-neutral-4: #666;
+    --color-neutral-5: #999;
+    --color-neutral-6: #ccc;
 }
 
 * {
@@ -24,7 +29,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -94,7 +100,8 @@ section {
 }
 
 @media (max-width: 992px) {
-    .section-title, 
+
+    .section-title,
     .section-subtitle {
         text-align: center;
         width: 100%;

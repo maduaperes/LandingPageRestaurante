@@ -30,6 +30,7 @@
 #cta_buttons {
     display: flex;
     gap: 24px;
+    align-items: center;
 }
 
 #cta_buttons a {
@@ -37,9 +38,21 @@
     color: var(--color-neutral-1);
 }
 
+#cta_buttons a{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 10px 14px;
+    font-weight: 500;
+    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
 .cta-note {
     color: #868686;
     font-size: 0.8rem;
+    display: block;
+    margin-top: 5px;
 }
 
 #phone_button {
@@ -53,22 +66,38 @@
     border-radius: 12px;
 }
 
-#phone_button button {
-    box-shadow: none;
+/* REDES SOCIAIS NA ESQUERDA - SEMPRE */
+.social-media-buttons {
+    display: flex;
+    justify-content: flex-start !important;
+    /* Garante a esquerda */
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    width: 100%;
 }
 
-#banner_container {
-    width: 50%;
-    position: relative;
+.social-media-buttons a {
+    background-color: #fff;
+    color: #000;
+    width: 45px;
+    height: 45px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    overflow: hidden;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.social-media-buttons a:hover {
+    transform: translateY(-3px);
 }
 
 #banner {
     position: relative;
-    width: 100%;
-    height: auto;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,14 +106,13 @@
 #banner img {
     width: 100%;
     max-width: 1100px;
-    min-width: 420px;
-    height: auto;
-    position: relative;
-    left: 0;
-    top: 0;
-    transform: none;
     z-index: 2;
-    transform: translateX(40px);
+    /* O scale(1.4) aumenta a imagem em 40%. 
+       Ajuste o valor (ex: 1.2 ou 1.5) conforme sua preferência. */
+    transform: scale(1.4) translateX(40px);
+
+    /* Garante que a imagem não perca qualidade ao aumentar */
+    object-fit: contain;
 }
 
 .shape {
@@ -96,14 +124,6 @@
     top: 10%;
     right: 10%;
     z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#social_buttons {
-    position: relative;
-    z-index: 2;
 }
 
 .demo-warning {

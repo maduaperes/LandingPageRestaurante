@@ -1,79 +1,144 @@
 footer {
     background-color: var(--color-primary-2);
+    width: 100%;
 }
 
 #footer_items {
     display: flex;
-    justify-content: space-between;
-    padding: 0px 8% 24px 8%;
+    justify-content: center;
+    /* Agrupa os itens no centro */
+    align-items: flex-start;
+    gap: 80px;
+    /* Aumente o gap para dar respiro entre as colunas */
+    padding: 30px 20px;
+    width: 100%;
+}
+
+.footer_section {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+#footer_social {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    margin-top: 15px !important;
+    width: 100% !important;
+}
+
+#footer_social a {
+    background-color: #ffffff !important;
+    /* Fundo branco */
+    color: #000000 !important;
+    /* Ícone preto */
+    width: 45px !important;
+    height: 45px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 12px !important;
+    /* Arredondado */
+    font-size: 1.4rem !important;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important;
+    text-decoration: none !important;
+    transition: 0.3s !important;
+}
+
+#footer_social a:hover {
+    transform: translateY(-3px) !important;
+    background-color: #f0f0f0 !important;
+}
+
+.footer_section span {
+    color: var(--color-neutral-3);
+    font-size: 13px;
+}
+
+.footer_section h4 {
+    margin-bottom: 12px;
+    /* Espaço menor abaixo do título */
+    font-size: 1.1rem;
+    color: var(--color-neutral-2);
+    white-space: nowrap;
+    /* Evita que o título quebre linha */
+}
+
+.footer_section p {
+    margin-bottom: 6px;
+    /* Espaço bem curto entre linhas de texto */
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 8px;
+    line-height: 1.2;
+    white-space: nowrap;
+    color: var(--color-neutral-2);
+    /* Mantém endereço/telefone em uma linha só */
+}
+
+#footer_bottom {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 8%;
+    /* Padding reduzido */
+    text-align: center;
 }
 
 #copyright {
     color: var(--color-neutral-1);
     font-weight: 500;
+    font-size: 13px;
 }
 
-.demo-footer {
-    font-size: 11px;
-    color: #888;
-    text-align: center;
-    margin-top: 10px;
+.social-media-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5px;
 }
 
-@media (max-width: 1280px) {
-    #footer_items {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        padding: 0px 4% 24px 4%;
-    }
-
-    #copyright {
-        text-align: center;
-        font-size: 17px;
-    }
+.social-media-buttons a {
+    color: var(--color-neutral-1);
+    font-size: 1.4rem;
+    transition: 0.3s;
 }
 
 @media (max-width: 1024px) {
     #footer_items {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        padding: 0px 4% 24px 4%;
+        justify-content: center;
+        text-align: center;
     }
 
-    #copyright {
-        text-align: center;
-        font-size: 15px;
+    .footer_section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza ícones e textos no tablet */
+        min-width: 40%;
+    }
+
+    .social-media-buttons {
+        justify-content: center;
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 600px) {
     #footer_items {
         flex-direction: column;
         align-items: center;
-        gap: 16px;
-        padding: 0px 4% 24px 4%;
+        padding: 20px 5%;
+    }
+
+    .footer_section {
+        width: 100%;
+        min-width: 100%;
     }
 
     #copyright {
-        text-align: center;
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 480px) {
-    #copyright {
-        font-size: 11px;
-    }
-
-    #footer_items {
-        padding: 0px 2% 24px 2%;
-    }
-
-    .demo-footer {
-        font-size: 11px;
+        font-size: 12px;
     }
 }
