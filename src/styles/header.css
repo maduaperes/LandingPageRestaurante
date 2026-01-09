@@ -1,7 +1,7 @@
 header {
     width: 100%;
     padding: 28px 8%;
-    position: relative;
+    position: fixed ! important;
     top: 0;
     background-color: var(--color-primary-1);
     z-index: 3;
@@ -46,7 +46,7 @@ header {
 
 #mobile_menu {
     display: none;
-    position: absolute;
+    position: fixed ! important;
     top: 100%;
     left: 0;
     width: 100%;
@@ -57,6 +57,10 @@ header {
     padding: 16px 0;
     z-index: 9999 !important;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#mobile_menu.active {
+    display: flex;
 }
 
 @media (max-width: 992px) {

@@ -1,8 +1,15 @@
 $(document).ready(function () {
-    // Menu Mobile
+    // Menu Mobile - Abrir e Fechar ao clicar no botão
     $('#mobile_btn').on('click', function () {
         $('#mobile_menu').toggleClass('active');
         $('#mobile_btn').find('i').toggleClass('fa-x');
+    });
+
+    // FECHAR MENU AO CLICAR EM UM LINK (NOVO)
+    // Seleciona os links dentro do menu mobile
+    $('#mobile_menu a').on('click', function () {
+        $('#mobile_menu').removeClass('active'); // Esconde o menu
+        $('#mobile_btn').find('i').removeClass('fa-x').addClass('fa-bars'); // Volta o ícone para os 3 risquinhos
     });
 
     // Scroll e Active Menu
@@ -13,12 +20,14 @@ $(document).ready(function () {
         const header = $('header');
         const scrollPosition = $(window).scrollTop() - header.outerHeight();
 
+        // Shadow do Header
         if (scrollPosition <= 0) {
             header.css('box-shadow', 'none');
         } else {
             header.css('box-shadow', '5px 1px 5px rgba(0, 0, 0, 0.1)');
         }
 
+        // Destaque de item ativo no menu
         let activeSectionIndex = 0;
         sections.each(function (i) {
             const section = $(this);
@@ -35,9 +44,8 @@ $(document).ready(function () {
         $(navItems[activeSectionIndex]).addClass('active');
     });
 
-    // WhatsApp (Corrigido)
+    // WhatsApp
     $('.btn-whatsapp').on('click', function (e) {
-        // Se o elemento clicado (ou o link pai) for o botão de telefone, não faz nada
         if ($(this).closest('#phone_button').length > 0) return;
 
         e.preventDefault();
