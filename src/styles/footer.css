@@ -6,10 +6,8 @@ footer {
 #footer_items {
     display: flex;
     justify-content: center;
-    /* Agrupa os itens no centro */
     align-items: flex-start;
     gap: 80px;
-    /* Aumente o gap para dar respiro entre as colunas */
     padding: 30px 20px;
     width: 100%;
 }
@@ -31,16 +29,13 @@ footer {
 
 #footer_social a {
     background-color: #ffffff !important;
-    /* Fundo branco */
     color: #000000 !important;
-    /* Ícone preto */
     width: 45px !important;
     height: 45px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     border-radius: 12px !important;
-    /* Arredondado */
     font-size: 1.4rem !important;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important;
     text-decoration: none !important;
@@ -59,16 +54,13 @@ footer {
 
 .footer_section h4 {
     margin-bottom: 12px;
-    /* Espaço menor abaixo do título */
     font-size: 1.1rem;
     color: var(--color-neutral-2);
     white-space: nowrap;
-    /* Evita que o título quebre linha */
 }
 
 .footer_section p {
     margin-bottom: 6px;
-    /* Espaço bem curto entre linhas de texto */
     font-size: 14px;
     display: flex;
     justify-content: center;
@@ -77,14 +69,12 @@ footer {
     line-height: 1.2;
     white-space: nowrap;
     color: var(--color-neutral-2);
-    /* Mantém endereço/telefone em uma linha só */
 }
 
 #footer_bottom {
     width: 100%;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 15px 8%;
-    /* Padding reduzido */
     text-align: center;
 }
 
@@ -117,7 +107,6 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* Centraliza ícones e textos no tablet */
         min-width: 40%;
     }
 
@@ -128,17 +117,58 @@ footer {
 
 @media (max-width: 600px) {
     #footer_items {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        /* Permite que os itens quebrem linha */
+        justify-content: center;
+        align-items: flex-start;
         padding: 20px 5%;
+        gap: 20px;
+        /* Espaço entre as colunas */
     }
 
-    .footer_section {
-        width: 100%;
-        min-width: 100%;
+    /* Ajusta as duas primeiras colunas para ficarem lado a lado */
+    .footer_section:nth-child(1),
+    .footer_section:nth-child(2) {
+        flex: 1 1 40%;
+        /* Ocupa cerca de metade da largura cada uma */
+        min-width: 140px;
+        /* Impede que fiquem espremidas demais */
+    }
+
+    /* Ajusta a última coluna (Redes Sociais) para ocupar a linha toda abaixo */
+    .footer_section:nth-child(3) {
+        flex: 1 1 100%;
+        /* Força a ocupar 100% da largura da nova linha */
+        margin-top: 10px;
+    }
+
+    .footer_section h4 {
+        font-size: 0.95rem;
+        /* Reduzi um pouco para caber na mesma linha */
+        margin-bottom: 8px;
+    }
+
+    .footer_section p,
+    .footer_section span {
+        font-size: 12px;
+        /* Texto menor para layout compacto */
+        margin-bottom: 4px;
+        white-space: normal;
+        /* Permite quebra de linha se o endereço for longo */
+    }
+
+    #footer_social a {
+        width: 40px !important;
+        height: 40px !important;
+        font-size: 1.2rem !important;
+    }
+
+    #footer_bottom {
+        padding: 10px 5%;
     }
 
     #copyright {
-        font-size: 12px;
+        font-size: 11px;
     }
 }
