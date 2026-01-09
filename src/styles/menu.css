@@ -1,4 +1,3 @@
-/* --- SEÇÃO MENU --- */
 #menu {
     display: flex;
     flex-direction: column;
@@ -10,14 +9,12 @@
     padding-bottom: 0px;
 }
 
-/* Container de cada categoria (Pratos, Sobremesas, etc) */
 .menu-category {
     width: 100%;
     max-width: 1200px;
     margin-bottom: 48px;
 }
 
-/* Título da Categoria */
 .category-title {
     font-size: 1.8rem;
     color: var(--color-primary-6);
@@ -29,18 +26,15 @@
     padding-bottom: 8px;
 }
 
-/* Grid de pratos dentro da categoria */
 .dishes {
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    /* Alinha à esquerda para manter ordem */
     gap: 24px;
 }
 
-/* --- CARD DO PRATO (DISH) --- */
 .dish {
     display: flex;
     flex-direction: column;
@@ -48,7 +42,6 @@
     justify-content: space-between;
     border-radius: 20px;
     gap: 18px;
-    /* Cálculo para 3 colunas subtraindo o gap */
     width: calc(33.33% - 16px);
     min-width: 280px;
     padding: 24px;
@@ -116,7 +109,6 @@
     color: #252525;
 }
 
-/* --- ELEMENTOS DE SUPORTE --- */
 .menu-warning {
     text-align: center;
     font-size: 14px;
@@ -132,13 +124,10 @@
     margin-top: 4px;
 }
 
-/* --- RESPONSIVIDADE --- */
-/* TABLETS: 3 pratos na mesma linha */
 @media (max-width: 1280px) {
     .dishes {
         display: flex;
         flex-wrap: nowrap;
-        /* Força os 3 na mesma linha */
         justify-content: center;
         gap: 10px;
         width: 100%;
@@ -165,20 +154,19 @@
 }
 
 @media (max-width: 872px) {
+
     #menu,
     .dishes {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
         width: 100% !important;
-        max-width: 100% !important;
+        box-sizing: border-box;
     }
 
     .dishes {
         display: flex !important;
         flex-direction: column !important;
-        gap: 10px;
+        gap: 12px;
     }
 
     .dish {
@@ -192,8 +180,8 @@
         max-width: 100% !important;
         background-color: #ffffff !important;
         padding: 8px 15px !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
+        border-radius: 20px !important;
+        box-shadow: #252525;
         border-bottom: 1px solid #f2f2f2;
         margin: 0 !important;
         justify-items: start;
@@ -221,7 +209,7 @@
     }
 
     .section-title {
-       padding-top: 80px !important;
+        padding-top: 10px !important;
     }
 
     .dish-description {
@@ -255,6 +243,14 @@
         border-radius: 8px;
     }
 
+    .category-title {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
     .category-title i {
         display: flex;
         align-items: center;
@@ -263,5 +259,18 @@
         color: var(--color-primary-6);
         margin-right: 0px;
         margin-left: 8px;
+    }
+
+    .menu-warning {
+        margin: 0 0 20px;
+
+    }
+
+    .section-subtitle {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+        margin-top: 0 !important;
+        padding-top: 0 !important;
     }
 }

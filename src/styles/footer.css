@@ -78,6 +78,12 @@ footer {
     text-align: center;
 }
 
+.footer-disclaimer {
+    color: #b10000;
+    font-weight: 500;
+    font-size: 10px;
+}
+
 #copyright {
     color: var(--color-neutral-1);
     font-weight: 500;
@@ -99,23 +105,90 @@ footer {
 
 @media (max-width: 1024px) {
     #footer_items {
-        justify-content: center;
-        text-align: center;
+        display: flex !important;
+        flex-direction: row !important;
+        /* Força ficar um ao lado do outro */
+        flex-wrap: nowrap !important;
+        /* Impede quebra de linha */
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 20px 2%;
+        /* Reduzi o padding lateral para ganhar espaço */
+        gap: 10px;
+        /* Espaço menor entre as colunas */
     }
 
+    /* Ajusta as 3 colunas para dividirem a mesma linha */
     .footer_section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-width: 40%;
+        flex: 1 1 30% !important;
+        min-width: 0 !important;
+        /* Permite que encolham além do padrão */
+        text-align: left;
     }
 
-    .social-media-buttons {
-        justify-content: center;
+    /* Alinhamento da coluna Siga-nos */
+    .footer_section:nth-child(3) {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        /* Centraliza o título e o container dos botões */
+        text-align: center !important;
+    }
+
+    /* Centraliza os botões dentro do container */
+    .footer_section:nth-child(3) .social-media-buttons {
+        justify-content: center !important;
+        /* Garante que os ícones fiquem no meio */
+        width: 100% !important;
+        margin-top: 10px !important;
+    }
+
+    /* Ajuste fino dos ícones para manter o padrão das fotos enviadas */
+    .footer_section:nth-child(3) .social-media-buttons a {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        background-color: #fff !important;
+        /* Cor de fundo igual à imagem */
+        border-radius: 8px !important;
+        /* Bordas levemente arredondadas */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+        /* Sombra suave */
     }
 }
 
-@media (max-width: 600px) {
+/* Diminuindo os textos para caberem lado a lado */
+.footer_section h4 {
+    font-size: 0.85rem !important;
+    margin-bottom: 5px !important;
+}
+
+.footer_section p,
+.footer_section span {
+    font-size: 12px !important;
+    /* Texto bem menor para não quebrar */
+    margin-bottom: 3px !important;
+    line-height: 1.2;
+}
+
+/* Reduzindo os ícones das redes sociais */
+.footer_section .social-media-buttons {
+    justify-content: flex-start !important;
+    gap: 8px !important;
+}
+
+.footer_section .social-media-buttons a {
+    width: 30px !important;
+    height: 30px !important;
+    font-size: 1rem !important;
+}
+
+#copyright {
+    font-size: 10px !important;
+    text-align: center;
+}
+
+@media (max-width: 780px) {
     #footer_items {
         display: flex;
         flex-wrap: wrap;
@@ -151,7 +224,7 @@ footer {
 
     .footer_section p,
     .footer_section span {
-        font-size: 12px;
+        font-size: 15px;
         /* Texto menor para layout compacto */
         margin-bottom: 4px;
         white-space: normal;
@@ -170,5 +243,145 @@ footer {
 
     #copyright {
         font-size: 11px;
+    }
+}
+
+@media (max-width: 600px) {
+    #footer_items {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        /* Permite a quebra para a segunda linha */
+        justify-content: center !important;
+        align-items: flex-start !important;
+        gap: 20px 10px !important;
+        /* 20px de espaço vertical, 10px horizontal */
+        padding: 20px 2% !important;
+    }
+
+    /* 1 e 2 - Ficam lado a lado no topo */
+    .footer_section:nth-child(1),
+    .footer_section:nth-child(2) {
+        flex: 1 1 45% !important;
+        /* Ocupam quase metade da largura cada */
+        min-width: 140px !important;
+        text-align: center !important;
+        /* Centraliza o texto interno */
+    }
+
+    /* 3 - Redes Sociais ocupam a linha de baixo centralizadas */
+    .footer_section:nth-child(3) {
+        flex: 1 1 100% !important;
+        /* Força ocupar a largura total da linha */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        /* Centraliza título e ícones */
+        margin-top: 10px !important;
+        text-align: center !important;
+    }
+
+    /* Centraliza especificamente os ícones */
+    .footer_section:nth-child(3) .social-media-buttons {
+        justify-content: center !important;
+        margin-top: 10px !important;
+    }
+
+    .footer_section:nth-child(3) .social-media-buttons a {
+        width: 35px !important;  /* Aumentado de ~30px para 45px */
+        height: 35px !important; /* Aumentado de ~30px para 45px */
+        font-size: 1.2rem !important; /* Tamanho do ícone interno maior */
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        border-radius: 10px !important; /* Arredondamento proporcional ao novo tamanho */
+    }
+
+    /* Ajuste de fontes para não quebrar layout */
+    .footer_section h4 {
+        font-size: 0.9rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .footer_section p,
+    .footer_section span {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        /* Centraliza o conjunto ícone+texto */
+        gap: 5px !important;
+        /* Controle preciso do espaço entre eles */
+    }
+
+    /* Aproxima o ícone do endereço */
+    .footer_section i {
+        margin-right: 5px !important;
+        /* Diminui o espaço entre o ícone e o texto */
+        width: auto !important;
+        /* Garante que a largura da caixa do ícone não seja excessiva */
+    }
+}
+
+@media (max-width: 480px) {
+    #footer_items {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        /* Permite a quebra para a segunda linha */
+        justify-content: center !important;
+        align-items: flex-start !important;
+        gap: 20px 10px !important;
+        /* 20px de espaço vertical, 10px horizontal */
+        padding: 20px 2% !important;
+    }
+
+    /* 1 e 2 - Ficam lado a lado no topo */
+    .footer_section:nth-child(1),
+    .footer_section:nth-child(2) {
+        flex: 1 1 45% !important;
+        /* Ocupam quase metade da largura cada */
+        min-width: 140px !important;
+        text-align: center !important;
+        /* Centraliza o texto interno */
+    }
+
+    /* 3 - Redes Sociais ocupam a linha de baixo centralizadas */
+    .footer_section:nth-child(3) {
+        flex: 1 1 100% !important;
+        /* Força ocupar a largura total da linha */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        /* Centraliza título e ícones */
+        margin-top: 10px !important;
+        text-align: center !important;
+    }
+
+    /* Centraliza especificamente os ícones */
+    .footer_section:nth-child(3) .social-media-buttons {
+        justify-content: center !important;
+        margin-top: 10px !important;
+    }
+
+    /* Ajuste de fontes para não quebrar layout */
+    .footer_section h4 {
+        font-size: 0.9rem !important;
+        margin-bottom: 8px !important;
+    }
+
+    .footer_section p,
+    .footer_section span {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        /* Centraliza o conjunto ícone+texto */
+        gap: 5px !important;
+        /* Controle preciso do espaço entre eles */
+    }
+
+    /* Aproxima o ícone do endereço */
+    .footer_section i {
+        margin-right: 5px !important;
+        /* Diminui o espaço entre o ícone e o texto */
+        width: auto !important;
+        /* Garante que a largura da caixa do ícone não seja excessiva */
     }
 }
