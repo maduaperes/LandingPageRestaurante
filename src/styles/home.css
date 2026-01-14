@@ -112,7 +112,11 @@
 }
 
 .demo-warning {
-    width: 100%;
+    margin-top: 91px;
+    /* Ajuste para a altura exata do seu header */
+    position: relative;
+    z-index: 999;
+    /* Garante que fique sobre outros elementos */
     background-color: #fff3f3;
     color: #b10000;
     text-align: center;
@@ -120,6 +124,7 @@
     padding: 10px 16px;
     font-weight: 500;
     border-bottom: 1px solid #f1caca;
+
 }
 
 @media (max-width: 1280px) {
