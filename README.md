@@ -87,12 +87,3 @@ O layout se adapta automaticamente a:
 
 Desenvolvido por **Madu Peres**
 💡 Projeto para fins educacionais e portfólio
-
----
-
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
-Sinta-se à vontade para usar, modificar e compartilhar.
-
-```
