@@ -7,14 +7,14 @@ Ideal para divulgação em redes sociais, cardápio digital e captação de clie
 
 ## Funcionalidades
 
-- ✅ Navbar fixa com navegação suave
-- ✅ Seção inicial (Hero) com chamada para ação
-- ✅ Cardápio em formato de cards
-- ✅ Avaliações de clientes
-- ✅ Layout totalmente responsivo (desktop, tablet e mobile)
-- ✅ Ícones modernos com Font Awesome
-- ✅ Animações suaves com ScrollReveal
-- ✅ Estrutura simples para fácil personalização
+-  Navbar fixa com navegação suave
+-  Seção inicial (Hero) com chamada para ação
+-  Cardápio em formato de cards
+-  Avaliações de clientes
+-  Layout totalmente responsivo (desktop, tablet e mobile)
+-  Ícones modernos com Font Awesome
+-  Animações suaves com ScrollReveal
+-  Estrutura simples para fácil personalização
 
 ---
 
