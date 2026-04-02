@@ -83,7 +83,7 @@ O layout se adapta automaticamente a:
 
 ---
 
-## 🧑‍💻 Autor
+## Autor
 
 Desenvolvido por **Madu Peres**
-💡 Projeto para fins educacionais e portfólio
+ Projeto para fins educacionais e portfólio
