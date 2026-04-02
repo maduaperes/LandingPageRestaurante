@@ -1,11 +1,11 @@
-# 🍽️ FreshBox — Landing Page de Restaurante
+# FreshBox — Landing Page de Restaurante
 
 Landing page moderna e responsiva para restaurante, desenvolvida com foco em **experiência do usuário**, **design atrativo** e **facilidade de uso**.  
 Ideal para divulgação em redes sociais, cardápio digital e captação de clientes.
 
 ---
 
-## ✨ Funcionalidades
+## Funcionalidades
 
 - ✅ Navbar fixa com navegação suave
 - ✅ Seção inicial (Hero) com chamada para ação
@@ -18,7 +18,7 @@ Ideal para divulgação em redes sociais, cardápio digital e captação de clie
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **HTML5**
 - **CSS3**
@@ -29,23 +29,23 @@ Ideal para divulgação em redes sociais, cardápio digital e captação de clie
 
 ---
 
-## 📂 Estrutura de Pastas
+## Estrutura de Pastas
 
 ```
 
-📁 src
-┣ 📁 images
-┣ 📁 styles
+ src
+┣  images
+┣  styles
 ┃ ┗ styles.css
-┣ 📁 javascript
+┣  javascript
 ┃ ┗ script.js
-📄 index.html
+ index.html
 
 ````
 
 ---
 
-## 🚀 Como Executar o Projeto
+## Como Executar o Projeto
 
 1. Clone o repositório:
 ```bash
@@ -62,7 +62,7 @@ git clone https://github.com/seu-usuario/seu-repositorio.git
 
 ---
 
-## 🎨 Personalização
+## Personalização
 
 Você pode facilmente:
 
@@ -73,13 +73,13 @@ Você pode facilmente:
 
 ---
 
-## 📱 Responsividade
+## Responsividade
 
 O layout se adapta automaticamente a:
 
-* 📱 Celulares
-* 📱 Tablets
-* 💻 Computadores
+* Celulares
+* Tablets
+* Computadores
 
 ---
 
