@@ -49,7 +49,7 @@ Ideal para divulgação em redes sociais, cardápio digital e captação de clie
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/maduaperes/restaurant-landing-page.git
 ````
 
 2. Abra o arquivo `index.html` no navegador
